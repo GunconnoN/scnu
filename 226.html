@@ -2037,7 +2037,7 @@ function __doPostBack(eventTarget, eventArgument) {
                                 var month=now.getMonth();
                                 var date=now.getDate();
                                 var hours=now.getHours()-1;
-                                 if(hours==0){
+                                 if(hours==-1){
                                      hours=23;}
 
                                 document.write(year+"/"+month+"/"+date+" "+hours+":00:00");
@@ -2049,11 +2049,11 @@ function __doPostBack(eventTarget, eventArgument) {
                         var year=now.getFullYear();
                         var month=now.getMonth();
                         var date=now.getDate();
-                        var hours=now.getHours()+3;
-                         if(hours==23){
-                             hours=0;}
+                        var hour=now.getHours()+3;
+                         if(hour==24){
+                             hour=0;}
 
-                        document.write(year+"/"+month+"/"+date+" "+hours+":00:00");
+                        document.write(year+"/"+month+"/"+date+" "+hour+":00:00");
                     
                 </script></td><td>无</td><td><script type="text/javascript">
                         
