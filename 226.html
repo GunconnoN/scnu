@@ -2038,7 +2038,8 @@ function __doPostBack(eventTarget, eventArgument) {
                                 var date=now.getDate();
                                 var hours=now.getHours()-1;
                                  if(hours==-1){
-                                     hours=23;}
+                                     hours=23;
+                                    date-=1;}
 
                                 document.write(year+"/"+month+"/"+date+" "+hours+":00:00");
                             
@@ -2049,9 +2050,10 @@ function __doPostBack(eventTarget, eventArgument) {
                         var year=now.getFullYear();
                         var month=now.getMonth()+1;
                         var date=now.getDate();
-                        var hour=now.getHours()+3;
-                         if(hour==24){
-                             hour=0;}
+                        var hour=now.getHours();
+                         if(hour>=21){
+                             hour=hour-21;
+                            date+=1;}
 
                         document.write(year+"/"+month+"/"+date+" "+hour+":00:00");
                     
