@@ -2054,6 +2054,7 @@ function __doPostBack(eventTarget, eventArgument) {
                          if(hour>=21){
                              hour=hour-21;
                             date+=1;}
+                            else hour+=3;
 
                         document.write(year+"/"+month+"/"+date+" "+hour+":00:00");
                     
